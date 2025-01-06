@@ -8,7 +8,9 @@
 
 ## Run Application
 
-The application can be run via Intellij or the command line using the below command from the repository root folder:
+The application can be run via Intellij or the command line using the below command from the repository root folder.
+
+### Set the environment variables located in the EnvVariables file before running the application.
 
 ~~~java
 java -jar /target/booksapi-0.0.1-SNAPSHOT.jar 

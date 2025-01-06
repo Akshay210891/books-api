@@ -1,0 +1,14 @@
+Set below environment variable before running the application.
+
+For Windows
+set RDB_URL=jdbc:postgresql://localhost:5432/postgres
+set RDB_USER=postgres
+set RDB_PASSWORD=root
+set JWT_TOKEN=a3ba9f8fe7217a54040ef4fcb1d14c5915f49fc60a093f547a59c4a12be0aaeb
+
+
+For Linux
+export RDB_URL='jdbc:postgresql://localhost:5432/postgres'
+export RDB_USER='postgres'
+export RDB_PASSWORD='root'
+export JWT_TOKEN=a3ba9f8fe7217a54040ef4fcb1d14c5915f49fc60a093f547a59c4a12be0aaeb'

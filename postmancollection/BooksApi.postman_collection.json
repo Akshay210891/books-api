@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "21a89ac2-53f0-4e9e-a622-04200ecca141",
+		"_postman_id": "d5782573-8be6-4f88-8f15-c4340c07f4f1",
 		"name": "BooksApi",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "40790598"
@@ -26,7 +26,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"ABCDEFGh\",\r\n    \"author\": \"Akshay Chawla - 1\",\r\n    \"publishedDate\": \"04-01-2025\",\r\n    \"genre\": \"Drama\"    \r\n}",
+					"raw": "{\r\n    \"title\": \"ABC\",\r\n    \"author\": \"Author\",\r\n    \"publishedDate\": \"04-01-2025\",\r\n    \"genre\": \"Drama\"    \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -48,7 +48,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "localhost:8080/v1/api/books/15"
+				"url": "localhost:8080/v1/api/books/1"
 			},
 			"response": []
 		},
@@ -79,7 +79,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/v1/api/books?pageNo=1&pageSize=5",
+					"raw": "localhost:8080/v1/api/books?pageNo=0&pageSize=5",
 					"host": [
 						"localhost"
 					],
@@ -92,7 +92,7 @@
 					"query": [
 						{
 							"key": "pageNo",
-							"value": "1"
+							"value": "0"
 						},
 						{
 							"key": "pageSize",
@@ -114,7 +114,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "localhost:8080/v1/api/books/author/Akshay Chawla"
+				"url": "localhost:8080/v1/api/books/author/{Author}"
 			},
 			"response": []
 		},
@@ -129,7 +129,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "localhost:8080/v1/api/books/genre/Drama"
+				"url": "localhost:8080/v1/api/books/title/{title}"
 			},
 			"response": []
 		},
@@ -144,7 +144,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "localhost:8080/v1/api/books/genre/Akshay Chawla"
+				"url": "localhost:8080/v1/api/books/genre/{genre}"
 			},
 			"response": []
 		},
@@ -159,7 +159,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "localhost:8080/v1/api/books/date/01-01-2022"
+				"url": "localhost:8080/v1/api/books/date/{dd-mm-yyy}"
 			},
 			"response": []
 		},
@@ -174,7 +174,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "localhost:8080/v1/api/books/search/fg"
+				"url": "localhost:8080/v1/api/books/search/{keyword}"
 			},
 			"response": []
 		},
@@ -198,14 +198,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"ABCDEFGhi\",\r\n    \"author\": \"Akshay Chawla - 5\",\r\n    \"publishedDate\": \"08-01-2025\",\r\n    \"genre\": \"Drama\"    \r\n}",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"title\",\r\n    \"author\": \"author\",\r\n    \"publishedDate\": \"08-01-2025\",\r\n    \"genre\": \"Drama\"    \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "localhost:8080/v1/api/books/17"
+				"url": "localhost:8080/v1/api/books/1"
 			},
 			"response": []
 		},
@@ -236,7 +236,7 @@
 						}
 					}
 				},
-				"url": "localhost:8080/v1/api/books/15"
+				"url": "localhost:8080/v1/api/books/1"
 			},
 			"response": []
 		}

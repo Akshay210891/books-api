@@ -74,11 +74,12 @@ POST
 ~~~java
 /v1/api/books/{Id} //update a specific book by Id
 --data '{
-    "title": "{title}",
-    "author": "{author}",
-    "publishedDate": "{dd-mm-yyyy}",
-    "genre": "{genre}"    
-}'
+        "id": {Id},
+        "title": "{title}",
+        "author": "{author}",
+        "publishedDate": "dd-mm-yyyy",
+        "genre": "{genre}"
+        }'
 ~~~
 
 

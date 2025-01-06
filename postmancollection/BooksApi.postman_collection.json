@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "21a89ac2-53f0-4e9e-a622-04200ecca141",
+		"name": "BooksApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40790598"
+	},
+	"item": [
+		{
+			"name": "Create Book in Catalog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "C2EFD851656486E8BF4840C24A976A70",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"ABCDEFGh\",\r\n    \"author\": \"Akshay Chawla - 1\",\r\n    \"publishedDate\": \"04-01-2025\",\r\n    \"genre\": \"Drama\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/v1/api/books"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/v1/api/books/15"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Books in Catalog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/v1/api/books"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books with Pagenation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/books?pageNo=1&pageSize=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Book by Author - Exact Match",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/v1/api/books/author/Akshay Chawla"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Book by Title - Contains IgnoreCase",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/v1/api/books/genre/Drama"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Book by Genre - Exact Match",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/v1/api/books/genre/Akshay Chawla"
+			},
+			"response": []
+		},
+		{
+			"name": "Search book greater than a published date",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/v1/api/books/date/01-01-2022"
+			},
+			"response": []
+		},
+		{
+			"name": "Search book a keyword - Contains in either Title or Author Ignore Case",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/v1/api/books/search/fg"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book in Catalog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "C2EFD851656486E8BF4840C24A976A70",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"ABCDEFGhi\",\r\n    \"author\": \"Akshay Chawla - 5\",\r\n    \"publishedDate\": \"08-01-2025\",\r\n    \"genre\": \"Drama\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/v1/api/books/17"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book in Catalog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJha3NoYXlAYWJjZC5jb20iLCJpYXQiOjE3MzYxNjcxNDYsImV4cCI6MTczNjI1MzU0Nn0.n4d4CXSDcTnCa0TOFjF5vozNzzCAKiMYQgPIPqwjSPc"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "C2EFD851656486E8BF4840C24A976A70",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 15,\r\n    \"title\": \"ABCDEFGhi\",\r\n    \"author\": \"Akshay Chawla - 5\",\r\n    \"publishedDate\": \"08-01-2025\",\r\n    \"genre\": \"Drama\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/v1/api/books/15"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "e444b9de-2aae-4fe0-8185-688429a811a4",
+		"name": "AuthApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40790598"
+	},
+	"item": [
+		{
+			"name": "Register New User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "C2EFD851656486E8BF4840C24A976A70",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"akshay@ab.com\",\r\n    \"username\": \"Akshay Chawla\",\r\n    \"password\": \"chawla\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Auth Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "C2EFD851656486E8BF4840C24A976A70",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"username\": \"Akshay Chawla\",\r\n    \"email\": \"akshay@abcd.com\",\r\n    \"password\": \"chawla\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/auth"
+			},
+			"response": []
+		}
+	]
+}
